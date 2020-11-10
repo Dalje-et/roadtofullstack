@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react';
 
-import "./NoNameYet.css"
+import './NoNameYet.css';
 
 export default function NoNameYet() {
   return (
     <div className="container">
-      <h1 className="heading fadeIn">My Journey to Fullstack</h1>  
+      <h1 className="heading fadeIn">My Journey to Fullstack</h1>
       <p className="introductionText fadeIn">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -14,5 +14,5 @@ export default function NoNameYet() {
         laborum.
       </p>
     </div>
-  )
+  );
 }

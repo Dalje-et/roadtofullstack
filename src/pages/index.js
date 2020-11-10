@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 import WhyAnotherBlog from 'src/components/WhyAnotherBlog/whyAnotherBlog.js'
 import BlogCarousel from 'src/components/Blog/blogCarousel'

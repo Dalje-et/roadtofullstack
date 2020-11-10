@@ -1,29 +1,28 @@
-import React from "react"
+import React from 'react';
 
-import BlogCard from 'src/components/Blog/blogCard'
+import BlogCard from 'src/components/Blog/blogCard';
 
-import "./blogCarousel.less"
+import './blogCarousel.less';
 
 export default function BlogCarousel({ title, posts }) {
-
   if (!posts || posts.length === 0) {
     return null;
   }
 
-  let ref = React.createRef();
+  const ref = React.createRef();
 
   const scrollLeft = () => {
     ref.current.scrollLeft -= 250;
-  }
-  
+  };
+
   const scrollRight = () => {
     ref.current.scrollLeft += 250;
-  }
+  };
 
   const cards = posts.map(({ node }) => {
-    const title = node.frontmatter.title || node.fields.slug
+    const title = node.frontmatter.title || node.fields.slug;
     return (
-      <BlogCard 
+      <BlogCard
         key={node.fields.slug}
         link={node.fields.slug}
         title={title}
@@ -35,7 +34,7 @@ export default function BlogCarousel({ title, posts }) {
   });
 
   return (
-    <div div="carouselContainer">
+    <div className="carouselContainer">
       <h2 className="carouselTitle">{title}</h2>
       <div className="blogCarousel" ref={ref}>
         {cards}
@@ -45,5 +44,5 @@ export default function BlogCarousel({ title, posts }) {
         <span className="scrollButtons" onClick={scrollRight}>&rarr;</span>
       </div>
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import "./mailingList.css"
+import './mailingList.css';
 
 export default function MailingList() {
   return (
@@ -9,5 +9,5 @@ export default function MailingList() {
       <input className="mailInput" type="email" placeholder="your.awesome@mail.com" />
       <div className="submitMail">Submit</div>
     </div>
-  )
+  );
 }

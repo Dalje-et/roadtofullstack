@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import "./twoColumnSection.less"
+import './twoColumnSection.less';
 
 export default function TwoColumnSection({contentLeft, contentRight}) {
   return (
@@ -12,5 +12,5 @@ export default function TwoColumnSection({contentLeft, contentRight}) {
         {contentRight}
       </div>
     </div>
-  )
+  );
 }

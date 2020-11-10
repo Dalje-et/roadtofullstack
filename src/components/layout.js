@@ -1,18 +1,17 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
-import MailingList from 'src/components/MailingList/mailingList'
-import { rhythm, scale } from '../utils/typography.js'
-import Header from 'src/components/Header/header'
+import { rhythm, scale } from '../utils/typography.js';
+import Header from 'src/components/Header/header';
 
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    const blogPath = `${__PATH_PREFIX__}/blog/`
-    let header
+    const { location, title, children } = this.props;
+    const rootPath = `${__PATH_PREFIX__}/`;
+    const blogPath = `${__PATH_PREFIX__}/blog/`;
+    let header;
 
     if (location.pathname === rootPath || location.pathname === blogPath) {
       header = (
@@ -20,41 +19,41 @@ class Layout extends React.Component {
           style={{
             ...scale(1.5),
             marginBottom: rhythm(1.5),
-            marginTop: 0,
+            marginTop: 0
           }}
         >
           <Link
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              color: `inherit`
             }}
             to={location.pathname === blogPath ? `/blog/` : `/`}
           >
             {title}
           </Link>
         </h1>
-      )
+      );
     } else {
       header = (
         <h3
           style={{
             fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
+            marginTop: 0
           }}
         >
           <Link
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              color: `inherit`
             }}
             to={`/blog/`}
           >
             {title}
           </Link>
         </h3>
-      )
+      );
     }
 
     return (
@@ -64,13 +63,10 @@ class Layout extends React.Component {
           {children}
         </main>
         <Footer>
-          <MailingList />
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsbyyyyy</a>
+          © {new Date().getFullYear()}, Built with lots of ❤️ and ☕ in MG
         </Footer>
       </Wrapper>
-    )
+    );
   }
 }
 
@@ -82,7 +78,7 @@ const Wrapper = styled.div`
   background-color: white;
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
-`
+`;
 
 const Footer = styled.footer`
   text-align: center;
@@ -90,6 +86,6 @@ const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
-export default Layout
+export default Layout;
