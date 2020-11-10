@@ -1,8 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
-import { rhythm, scale } from "../utils/typography"
+import MailingList from 'src/components/MailingList/mailingList'
+import { rhythm, scale } from '../utils/typography.js'
+import Header from 'src/components/Header/header'
+
 
 class Layout extends React.Component {
   render() {
@@ -53,23 +56,18 @@ class Layout extends React.Component {
         </h3>
       )
     }
+
     return (
       <Wrapper>
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          }}
-        >
-          <header>{header}</header>
-          <main>{children}</main>
-        </div>
+        <Header />
+        <main>
+          {children}
+        </main>
         <Footer>
+          <MailingList />
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.gatsbyjs.org">Gatsbyyyyy</a>
         </Footer>
       </Wrapper>
     )
@@ -78,11 +76,20 @@ class Layout extends React.Component {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  margin-top: -5rem;
+  position: relative;
+  z-index: 200;
+  background-color: white;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
 `
 
 const Footer = styled.footer`
   text-align: center;
   margin: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export default Layout

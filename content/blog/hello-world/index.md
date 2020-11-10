@@ -1,6 +1,7 @@
 ---
-title: Hello World
+title: A slightly longer title than any other blog currently has
 date: "2015-05-01T22:12:03.284Z"
+tags: Hello World,Tech,World,News
 ---
 
 This is my first post on my new fake blog! How exciting!

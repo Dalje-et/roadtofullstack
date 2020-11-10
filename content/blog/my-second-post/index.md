@@ -1,6 +1,7 @@
 ---
-title: My Second Post!
+title: Let's build a cross-platform mobile app pt.1
 date: "2015-05-06T23:46:37.121Z"
+tags: Hello World,Tech,World,News
 ---
 
 Wow! I love blogging so much already.

@@ -1,0 +1,31 @@
+.twoColumnSectionContainer {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;  
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 75px;
+}
+
+.right {
+  width: 500px;
+  max-width: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  border-left: 2px dotted darkgrey;
+}
+
+.left {
+  width: 300px;
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 100%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 863px) { // 799px + 4rem
+  .left {
+    text-align: left;
+  }
+}

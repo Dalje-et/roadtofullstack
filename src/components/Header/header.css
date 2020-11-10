@@ -1,0 +1,38 @@
+.header {
+  width: 100vw;
+  height: 4rem;
+  padding: 1.5rem;
+}
+
+.logo {
+  font-size: x-large;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0.5rem;
+  float: left;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.logo-link {
+  color: black;
+  box-shadow: none;
+}
+
+.logo-link {
+  text-decoration: dashed;
+}
+
+.menu {
+  font-size: x-large;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0.5rem;
+  float: right;
+}
+
+.menu:hover {
+  cursor: pointer;
+}

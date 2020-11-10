@@ -1,10 +1,13 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+
+import BlogCard from 'src/components/Blog/blogCard'
 import { useFlexSearch } from "react-use-flexsearch"
+import styled from "styled-components"
 import * as queryString from "query-string"
 
 import { rhythm } from "../utils/typography"
+import BlogCarousel from "src/components/Blog/blogCarousel"
 
 const SearchBar = styled.div`
   display: flex;
@@ -43,65 +46,43 @@ const SearchBar = styled.div`
 
 const SearchedPosts = ({ results }) =>
   results.length > 0 ? (
-    results.map(node => {
-      const date = node.date
-      const title = node.title || node.slug
-      const description = node.description
-      const excerpt = node.excerpt
-      const slug = node.slug
-
-      return (
-        <div key={slug}>
-          <h3
-            style={{
-              marginBottom: rhythm(1 / 4),
-            }}
-          >
-            <Link style={{ boxShadow: `none` }} to={`/blog${slug}`}>
-              {title}
-            </Link>
-          </h3>
-          <small>{date}</small>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: description || excerpt,
-            }}
+    <BlogCarousel
+      cards={results.map(node => {
+        return (
+          <BlogCard 
+            key={node.slug}
+            link={node.slug}
+            title={node.title || node.slug}
+            date={node.date}
+            tags={node.tags}
+            excerpt={node.excerpt}
           />
-        </div>
-      )
-    })
+        );
+      })}
+    />
   ) : (
     <p style={{ textAlign: "center" }}>
       Sorry, couldn't find any posts matching this search.
     </p>
   )
 
-const AllPosts = ({ posts }) => (
-  <div style={{ margin: "20px 0 40px" }}>
-    {posts.map(({ node }) => {
-      const title = node.frontmatter.title || node.fields.slug
-      return (
-        <div key={node.fields.slug}>
-          <h3
-            style={{
-              marginBottom: rhythm(1 / 4),
-            }}
-          >
-            <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
-              {title}
-            </Link>
-          </h3>
-          <small>{node.frontmatter.date}</small>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: node.frontmatter.description || node.excerpt,
-            }}
-          />
-        </div>
-      )
-    })}
-  </div>
-)
+const AllPosts = ({ posts }) => {
+  const cards = posts.map(({ node }) => {
+    const title = node.frontmatter.title || node.fields.slug
+    return (
+      <BlogCard 
+        key={node.fields.slug}
+        link={node.fields.slug}
+        title={title}
+        date={node.frontmatter.date}
+        tags={node.frontmatter.tags}
+        excerpt={node.frontmatter.description || node.excerpt}
+      />
+    );
+  });
+
+  return <BlogCarousel cards={cards} />
+}
 
 const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
   const { search } = queryString.parse(location.search)

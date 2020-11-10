@@ -1,39 +1,68 @@
 import React from "react"
-import { Link } from "gatsby"
 
+import WhyAnotherBlog from 'src/components/WhyAnotherBlog/whyAnotherBlog.js'
+import BlogCarousel from 'src/components/Blog/blogCarousel'
+import AboutMe from 'src/components/AboutMe/aboutMe.js'
+import NoNameYet from 'src/components/NoNameYet.js'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
+
+import "./layout.css"
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Gatsby Starter Personal Website"
+    const { data } = this.props;
+    const siteTitle = "Road To Fullstack";
+    const posts = data.allMdx.edges;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
-        <h1>
-          Hey people{" "}
-          <span role="img" aria-label="wave emoji">
-            👋
-          </span>
-        </h1>
-        <p>Welcome to your new Gatsby website. You are on your home page.</p>
-        <p>
-          This starter comes out of the box with styled components and Gatsby's
-          default starter blog running on Netlify CMS.
-        </p>
-        <p>Now go build something great!</p>
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
-      </Layout>
+      <>
+        <Layout location={this.props.location} title={siteTitle}>
+          <SEO
+            title={siteTitle}
+            keywords={[`blog`, `developer`, `fullstack`, `advice`]}
+          />
+          <NoNameYet />
+          <AboutMe />
+          <WhyAnotherBlog />
+          <BlogCarousel
+            title="All posts"
+            posts={posts}
+          />
+        </Layout>
+      </>
     )
   }
 }
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    localSearchBlog {
+      index
+      store
+    }
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            tags
+          }
+        }
+      }
+    }
+  }
+`

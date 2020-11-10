@@ -1,0 +1,42 @@
+.carouselContainer {
+  margin-top: 10rem;
+  margin-bottom: 30rem;
+}
+
+.blogCarousel {
+  display: flex;
+  flex-direction:row;
+  text-align: left;
+
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  width: 90vw;
+
+  padding-left: 15%;
+  margin-right: 200px;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.carouselTitle {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.carouselScrollButtons {
+  float: right;
+  margin-right: 10vw; // because blogCarousel width is 90vw. This will position the buttons at the end of the carousel.
+}
+
+.scrollButtons {
+  padding: 2px;
+  font-size: 30px;
+  color: #f7bf8e;
+
+  &:hover {
+    cursor: pointer;
+    color: #FCDFC5;
+  }
+}
