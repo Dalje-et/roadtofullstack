@@ -58,12 +58,14 @@ class Layout extends React.Component {
 
     return (
       <Wrapper>
-        <Header />
         <main>
           {children}
         </main>
         <Footer>
-          © {new Date().getFullYear()}, Built with lots of ❤️ and ☕ in MG
+          © {new Date().getFullYear()}, Built with lots of ❤️ and ☕ in MG <br />
+          <div>
+            <Link to="/imprint">Imprint</Link> | <Link to="/imprint">Privacy Policy</Link>
+          </div>
         </Footer>
       </Wrapper>
     );
@@ -72,17 +74,13 @@ class Layout extends React.Component {
 
 const Wrapper = styled.div`
   min-height: 100vh;
-  margin-top: -5rem;
   position: relative;
-  z-index: 200;
-  background-color: white;
-  border-top-left-radius: 5rem;
-  border-top-right-radius: 5rem;
+  background: rgba(255,235,181, 0.2);
 `;
 
 const Footer = styled.footer`
   text-align: center;
-  margin: 24px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;

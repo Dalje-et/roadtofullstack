@@ -1,9 +1,9 @@
 import React from 'react';
 
-import "./blogHeader.css"
+import './blogHeader.less';
 
-export default function BlogHeader({ color }) {
-  return (
-    <div className="blogHeader"></div>
-  )
+export default function BlogHeader({ title }) {
+  return <div className="blogHeader">
+    <span className="blogHeaderTitle">{title}</span>
+  </div>;
 }

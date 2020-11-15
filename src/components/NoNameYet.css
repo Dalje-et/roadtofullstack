@@ -6,9 +6,6 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-
-  background: rgb(255,235,181);
-  background: linear-gradient(180deg, rgba(255,235,181,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 .underline--magical {
@@ -24,7 +21,7 @@
 }
 
 .heading {
-  font-size: 5vw;
+  font-size: 7vw;
 }
 
 .fadeIn {
@@ -38,4 +35,5 @@
   min-width: 300px;
   width: 50vw;
   max-width: 700px;
+  font-size: 20px;
 }

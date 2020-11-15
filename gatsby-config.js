@@ -1,31 +1,31 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Daljeet's new website`,
-    author: `Daljeet`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://roadtofullstack.com`,
+    title: 'Road to Fullstack',
+    author: 'Daljeet Sandu',
+    description: 'A blog about software engineering and self development through the eyes of a graduate student.',
+    siteUrl: 'https://roadtofullstack.com',
     social: {
-      twitter: `gatsbyjs`,
-    },
+      twitter: 'gatsbyjs'
+    }
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-less`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-styled-components',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-less',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: "gatsby-plugin-local-search",
+      resolve: 'gatsby-plugin-local-search',
       options: {
-        name: "blog",
-        engine: "flexsearch",
+        name: 'blog',
+        engine: 'flexsearch',
         engineOptions: {
-          encode: "icase",
-          tokenize: "forward",
-          async: false,
+          encode: 'icase',
+          tokenize: 'forward',
+          async: false
         },
         query: `
           {
@@ -44,110 +44,108 @@ module.exports = {
             }
           }
         `,
-        ref: "id",
-        index: ["title", "rawBody"],
-        store: ["id", "slug", "date", "title", "excerpt", "description"],
+        ref: 'id',
+        index: ['title', 'rawBody'],
+        store: ['id', 'slug', 'date', 'title', 'excerpt', 'description'],
         normalizer: ({ data }) =>
-          data.allMdx.nodes.map(node => ({
+          data.allMdx.nodes.map((node) => ({
             id: node.id,
             slug: node.fields.slug,
             rawBody: node.rawBody,
             excerpt: node.excerpt,
             title: node.frontmatter.title,
             description: node.frontmatter.description,
-            date: node.frontmatter.date,
-          })),
-      },
+            date: node.frontmatter.date
+          }))
+      }
     },
-    `gatsby-plugin-feed-mdx`,
+    // 'gatsby-plugin-feed-mdx',
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          `roboto\:300,400,400i,700`,
-          `playfair display\:300,400,400i,700`
-          //`source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+          'roboto\:300,400,400i,700',
+          'playfair display\:300,400,400i,700'
         ],
         display: 'swap'
       }
     },
-    `gatsby-plugin-root-import`,
+    'gatsby-plugin-root-import',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
+        name: 'blog'
+      }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
+        name: 'assets'
+      }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/components`,
-        name: `components`,
-      },
+        name: 'components'
+      }
     },
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: [".mdx", ".md"],
+        extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 590,
-            },
+              maxWidth: 590
+            }
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: 'margin-bottom: 1.0725rem'
+            }
           },
           {
-            resolve: `gatsby-remark-vscode`,
+            resolve: 'gatsby-remark-vscode'
           },
           {
-            resolve: `gatsby-remark-copy-linked-files`,
+            resolve: 'gatsby-remark-copy-linked-files'
           },
           {
-            resolve: `gatsby-remark-smartypants`,
-          },
+            resolve: 'gatsby-remark-smartypants'
+          }
         ],
-        plugins: [`gatsby-remark-images`],
-      },
+        plugins: ['gatsby-remark-images']
+      }
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
+        trackingId: 'UA-126793378-2'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Gatsby Starter Blog',
+        short_name: 'GatsbyJS',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#663399',
+        display: 'minimal-ui',
         // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
+        icon: 'content/assets/gatsby-icon.png'
+      }
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-typography',
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        // edit below
-        icon: `content/assets/gatsby-icon.png`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-  ],
-}
+        pathToConfigModule: 'src/utils/typography'
+      }
+    }
+  ]
+};

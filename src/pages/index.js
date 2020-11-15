@@ -1,18 +1,18 @@
 import React from 'react';
 
-import WhyAnotherBlog from 'src/components/WhyAnotherBlog/whyAnotherBlog.js'
-import BlogCarousel from 'src/components/Blog/blogCarousel'
-import AboutMe from 'src/components/AboutMe/aboutMe.js'
-import NoNameYet from 'src/components/NoNameYet.js'
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import WhyAnotherBlog from 'src/components/WhyAnotherBlog/whyAnotherBlog.js';
+import BlogCarousel from 'src/components/Blog/blogCarousel';
+import AboutMe from 'src/components/AboutMe/aboutMe.js';
+import NoNameYet from 'src/components/NoNameYet.js';
+import Layout from 'src/components/layout';
+import SEO from 'src/components/seo';
 
-import "./layout.css"
+import './layout.css';
 
 class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
-    const siteTitle = "Road To Fullstack";
+    const siteTitle = 'Road To Fullstack';
     const posts = data.allMdx.edges;
 
     return (
@@ -31,11 +31,11 @@ class IndexPage extends React.Component {
           />
         </Layout>
       </>
-    )
+    );
   }
 }
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query {
@@ -65,4 +65,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

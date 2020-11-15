@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import BlogCard from 'src/components/Blog/blogCard';
 
@@ -19,13 +19,15 @@ export default function BlogCarousel({ title, posts }) {
     ref.current.scrollLeft += 250;
   };
 
-  const cards = posts.map(({ node }) => {
+  const cardNodes = posts.map(({ node }) => {
     const title = node.frontmatter.title || node.fields.slug;
+    const cardRef = React.createRef();
     return (
       <BlogCard
         key={node.fields.slug}
         link={node.fields.slug}
         title={title}
+        ref={cardRef}
         date={node.frontmatter.date}
         tags={node.frontmatter.tags}
         excerpt={node.frontmatter.description || node.excerpt}
@@ -33,11 +35,19 @@ export default function BlogCarousel({ title, posts }) {
     );
   });
 
+  /**
+   * Sets the opacity of all blog cards in this carousel once at the beginning.
+   */
+  useEffect(() => {
+    setCardOpacity(ref, cardNodes);
+  });
+
+
   return (
     <div className="carouselContainer">
       <h2 className="carouselTitle">{title}</h2>
-      <div className="blogCarousel" ref={ref}>
-        {cards}
+      <div className="blogCarousel" ref={ref} onScroll={() => setCardOpacity(ref, cardNodes)}>
+        {cardNodes}
       </div>
       <div className="carouselScrollButtons">
         <span className="scrollButtons" onClick={scrollLeft}>&larr;</span>
@@ -45,4 +55,15 @@ export default function BlogCarousel({ title, posts }) {
       </div>
     </div>
   );
+
+  function setCardOpacity(ref, cards) {
+    cards.map((card) => {
+      const cardRef = card.ref.current;
+      if (cardRef.offsetLeft + (cardRef.offsetWidth * 0.8) - ref.current.scrollLeft > ref.current.offsetWidth) {
+        cardRef.style.opacity = 0.5;
+      } else {
+        cardRef.style.opacity = 1;
+      }
+    });
+  }
 }

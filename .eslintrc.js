@@ -15,7 +15,7 @@ module.exports = {
     'ecmaFeatures': {
       'jsx': true
     },
-    'ecmaVersion': 2018,
+    'ecmaVersion': 7,
     'sourceType': 'module' // Allows for the use of imports
   },
   'plugins': [

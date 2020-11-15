@@ -11,7 +11,7 @@ export default function AboutMe() {
       Hey there <span role="img" aria-label="waving">👋🏾</span> My name is Daljeet and I am a Software Engineer
       <a href="https://www.instana.com" target="_blank" rel="noreferrer">@Instana</a>. I am the author of this
       blog and really interested in topics such as: software craftmanship, clean design, and psychology. I am
-      also passionate about sharing knowledge (about literally anything) and dad jokes.
+      also passionate about knowledge sharing and dad jokes.
     </p>
   );
 
