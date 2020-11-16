@@ -1,8 +1,8 @@
 const tagColors = new Map();
-tagColors.set("News", "#C5E0D8")
-tagColors.set("Tech", "#DDBEA8")
+tagColors.set('News', '#8447FF');
+tagColors.set('Tech', '#373D20');
 
-const defaultTagColor = "#D1D7DC";
+const defaultTagColor = '#85756E';
 
 export function getTagColor(tag) {
   const result = tagColors.get(tag);

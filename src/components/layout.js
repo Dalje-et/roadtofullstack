@@ -75,7 +75,7 @@ class Layout extends React.Component {
 const Wrapper = styled.div`
   min-height: 100vh;
   position: relative;
-  background: rgba(255,235,181, 0.2);
+  background: white;
 `;
 
 const Footer = styled.footer`
