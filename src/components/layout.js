@@ -58,14 +58,13 @@ class Layout extends React.Component {
 
     return (
       <Wrapper>
+        <Header />
         <main>
           {children}
         </main>
         <Footer>
-          © {new Date().getFullYear()}, Built with lots of ❤️ and ☕ in MG <br />
-          <div>
-            <Link to="/imprint">Imprint</Link> | <Link to="/imprint">Privacy Policy</Link>
-          </div>
+          <span>© {new Date().getFullYear()}, Built with lots of ❤️ and ☕ in MG</span>
+          <span><Link to="/imprint">Imprint</Link> | <Link to="/privacyPolicy">Privacy Policy</Link></span>
         </Footer>
       </Wrapper>
     );

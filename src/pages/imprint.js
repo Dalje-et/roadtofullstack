@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import Layout from 'src/components/layout';
 import SEO from 'src/components/seo';
 
-import './imprint.less';
 import './layout.css';
 
 class ImprintPage extends React.Component {

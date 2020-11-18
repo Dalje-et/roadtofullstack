@@ -1,14 +1,15 @@
 .header {
   width: 100vw;
-  height: 4rem;
-  padding: 1.5rem;
+  max-width: 100vw;
+  height: 5vh;
+  border-bottom: 1px solid hsla(0,0%,0%,0.2);
 }
 
 .logo {
-  font-size: x-large;
-  display: table-cell;
+  font-size: 22px;
   vertical-align: middle;
-  padding: 0.5rem;
+  line-height: 5vh;
+  margin-left: 5vh;
   float: left;
 }
 
@@ -17,12 +18,9 @@
 }
 
 .logo-link {
-  color: black;
   box-shadow: none;
-}
-
-.logo-link {
-  text-decoration: dashed;
+  color: #152451;
+  textDecoration: none;
 }
 
 .menu {
@@ -35,4 +33,16 @@
 
 .menu:hover {
   cursor: pointer;
+}
+
+.underline--magical {
+  background-image: linear-gradient(120deg, #ffffff 0%, #8447FF 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+
+.underline--magical:hover {
+  background-size: 100% 88%;
 }

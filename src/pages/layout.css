@@ -1,6 +1,15 @@
-h1, h2, h3, h4, h5, h6, p, span {
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li {
   font-family: "Playfair Display", serif;
   color: #152451;
+}
+
+a {
+  font-family: "Playfair Display", serif;
+  color: #774E24;
 }
 
 @keyframes fadeIn {
@@ -36,4 +45,12 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 .underline--magical:hover {
   background-size: 100% 88%;
+}
+
+.privacyPolicy, .imprint {
+  width: 800px;
+  max-width: 95vw;
+  padding: 1rem;
+
+  margin: 0 auto;
 }

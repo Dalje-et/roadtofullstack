@@ -9,6 +9,7 @@ export default function NoNameYet() {
       <p className="introductionText">
         A blog about Software Engineering and Self Development
       </p>
+      <a href="#allBlogPosts">Check out my posts!</a>
     </div>
   );
 }

@@ -6,7 +6,7 @@ module.exports = {
     description: 'A blog about software engineering and self development through the eyes of a graduate student.',
     siteUrl: 'https://roadtofullstack.com',
     social: {
-      twitter: 'gatsbyjs'
+      twitter: 'daljeetsan'
     }
   },
   plugins: [
@@ -125,7 +125,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-126793378-3'
+        trackingId: 'UA-126793378-3',
+        anonymize: true
       }
     },
     {
