@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import CookieConsent, { Cookies } from 'react-cookie-consent';
 
-import { rhythm, scale } from '../utils/typography.js';
 import Header from 'src/components/Header/header';
 
 
@@ -27,6 +27,18 @@ class Layout extends React.Component {
           <span>© {new Date().getFullYear()}, Built with lots of ❤️ and ☕ in MG</span>
           <span><Link to="/imprint">Imprint</Link> | <Link to="/privacyPolicy">Privacy Policy</Link></span>
         </Footer>
+        <CookieConsent
+          location="bottom"
+          buttonText="Accept"
+          declineButtonText="Decline"
+          onAccept={() => {
+            Cookies.set('gatsby-gdpr-google-analytics', 'true', { expires: 3, path: '/' });
+            Cookies.set('gatsby-gdpr-google-tagmanager', 'true', { expires: 3, path: '/' });
+          }}
+          enableDeclineButton
+        >
+            This site uses cookies ...
+        </CookieConsent>
       </Wrapper>
     );
   }
