@@ -40,9 +40,9 @@ class Layout extends React.Component {
           }}
           disableStyles
         >
-            I use cookies to get insights on what kind of content my visitors like. This information will not be used to
-            display any kind of advertising. Feel free to check out the privacy policy page which is linked at
-            bottom of every page on this site.
+            I use cookies to understand how you use this site and to improve your experience. I do not use them to show
+            you any personalized content and advertising. Read about how I use cookies <Link to="/privacyPolicy">
+            here</Link>. No cookies are used until I do not have your consent.
         </CookieConsent>
       </Wrapper>
     );
