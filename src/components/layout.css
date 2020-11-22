@@ -48,6 +48,16 @@ a {
   z-index: 999;
   bottom: 0px;
   padding: 15px;
+  animation: cookieSlide 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes cookieSlide {
+  0% {
+    bottom: -500px;
+  }
+  100% {
+    bottom: 0;
+  }
 }
 
 .cookieConsentContent {
