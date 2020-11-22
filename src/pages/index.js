@@ -3,11 +3,11 @@ import React from 'react';
 import WhyAnotherBlog from 'src/components/WhyAnotherBlog/whyAnotherBlog.js';
 import BlogCarousel from 'src/components/Blog/blogCarousel';
 import AboutMe from 'src/components/AboutMe/aboutMe.js';
-import NoNameYet from 'src/components/NoNameYet.js';
+import Banner from 'src/components/Banner/banner';
 import Layout from 'src/components/layout';
 import SEO from 'src/components/seo';
 
-import './layout.css';
+import 'src/components/layout.css';
 
 class IndexPage extends React.Component {
   render() {
@@ -21,8 +21,9 @@ class IndexPage extends React.Component {
           <SEO
             title={siteTitle}
             keywords={[`blog`, `developer`, `fullstack`, `advice`]}
+            description="Insert your meta data"
           />
-          <NoNameYet />
+          <Banner />
           <AboutMe />
           <WhyAnotherBlog />
           <BlogCarousel

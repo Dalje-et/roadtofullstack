@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from 'src/components/layout';
 import SEO from 'src/components/seo';
 
-import './layout.css';
+import 'src/components/layout.css';
 
 class PrivacyPolicyPage extends React.Component {
   render() {

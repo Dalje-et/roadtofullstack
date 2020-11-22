@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li {
+  font-family: "Playfair Display", serif;
+  color: #152451;
+}
+
+a {
+  font-family: "Playfair Display", serif;
+  color: #774E24;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.5s forwards;
+}
+
+.privacyPolicy, .imprint {
+  width: 800px;
+  max-width: 95vw;
+  padding: 1rem;
+
+  margin: 0 auto;
+}
+
+.cookieConsentContainer {
+  background: white;
+  border: 1px dotted #152451;
+  align-items: baseline;
+  color: #152451;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  bottom: 0px;
+  padding: 15px;
+}
+
+.cookieConsentContent {
+  flex: 1 0 300px;
+  margin: 15px;
+}
+
+.cookieConsentButton {
+  background: #774E24;
+  border: 0px;
+  border-radius: 0px;
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  margin: 15px;
+}

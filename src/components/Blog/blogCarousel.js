@@ -49,10 +49,10 @@ export default function BlogCarousel({ title, posts }) {
       <div className="blogCarousel" ref={ref} onScroll={() => setCardOpacity(ref, cardNodes)}>
         {cardNodes}
       </div>
-      <div className="carouselScrollButtons">
+      {/* <div className="carouselScrollButtons">
         <span className="scrollButtons" onClick={scrollLeft}>&larr;</span>
         <span className="scrollButtons" onClick={scrollRight}>&rarr;</span>
-      </div>
+      </div> */}
     </section>
   );
 

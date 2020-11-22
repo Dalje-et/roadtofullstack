@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './NoNameYet.css';
+import './banner.css';
 
-export default function NoNameYet() {
+export default function Banner() {
   return (
     <div className="container">
       <h1 className="heading">Road to Fullstack</h1>

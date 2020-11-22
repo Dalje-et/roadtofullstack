@@ -5,6 +5,7 @@ import CookieConsent, { Cookies } from 'react-cookie-consent';
 
 import Header from 'src/components/Header/header';
 
+import './layout.css';
 
 class Layout extends React.Component {
   render() {
@@ -30,14 +31,18 @@ class Layout extends React.Component {
         <CookieConsent
           location="bottom"
           buttonText="Accept"
-          declineButtonText="Decline"
+          containerClasses="cookieConsentContainer"
+          contentClasses="cookieConsentContent"
+          buttonClasses="cookieConsentButton"
           onAccept={() => {
             Cookies.set('gatsby-gdpr-google-analytics', 'true', { expires: 3, path: '/' });
             Cookies.set('gatsby-gdpr-google-tagmanager', 'true', { expires: 3, path: '/' });
           }}
-          enableDeclineButton
+          disableStyles
         >
-            This site uses cookies ...
+            I use cookies to get insights on what kind of content my visitors like. This information will not be used to
+            display any kind of advertising. Feel free to check out the privacy policy page which is linked at
+            bottom of every page on this site.
         </CookieConsent>
       </Wrapper>
     );
