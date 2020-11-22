@@ -12,20 +12,6 @@ a {
   color: #774E24;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.9;
-  }
-}
-
-.fadeIn {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out 0.5s forwards;
-}
-
 .privacyPolicy, .imprint {
   width: 800px;
   max-width: 95vw;
