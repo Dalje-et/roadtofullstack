@@ -123,12 +123,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-126793378-3'
-      }
-    },
-    {
       resolve: 'gatsby-plugin-gdpr-cookies',
       options: {
         googleAnalytics: {
