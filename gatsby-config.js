@@ -5,6 +5,7 @@ module.exports = {
     author: 'Daljeet Sandu',
     description: 'A blog about software engineering and self development through the eyes of a graduate student.',
     siteUrl: 'https://roadtofullstack.com',
+    image: 'defaultImage.png',
     social: {
       twitter: 'daljeetsan'
     }
@@ -141,7 +142,7 @@ module.exports = {
           cookieName: '' // default
         },
         // defines the environments where the tracking should be available  - default is ["production"]
-        environments: ['production', 'development']
+        environments: ['production']
       }
     },
     {
