@@ -5,7 +5,7 @@ module.exports = {
     author: 'Daljeet Sandu',
     description: 'A blog about software engineering and self development through the eyes of a graduate student.',
     siteUrl: 'https://roadtofullstack.com',
-    image: 'defaultImage.png',
+    image: '/images/defaultImage.png',
     social: {
       twitter: 'daljeetsan'
     }

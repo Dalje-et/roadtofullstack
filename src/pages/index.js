@@ -21,7 +21,6 @@ class IndexPage extends React.Component {
           <SEO
             title={siteTitle}
             keywords={[`blog`, `developer`, `fullstack`, `advice`]}
-            description="Insert your meta data"
           />
           <Banner />
           <AboutMe />
