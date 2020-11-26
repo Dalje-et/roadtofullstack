@@ -36,6 +36,7 @@ module.exports = {
     'max-len': ['error', { 'code': 120 }],
     'jsx-quotes': ['error', 'prefer-double'],
     'indent': ['error', 2],
-    'react/prop-types': 0
+    'react/prop-types': 0,
+    'linebreak-style': 0
   }
 };

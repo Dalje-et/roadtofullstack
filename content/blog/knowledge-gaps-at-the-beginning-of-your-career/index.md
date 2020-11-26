@@ -3,7 +3,7 @@ title: Embracing knowledge gaps at the beginning of your career
 date: "2020-11-25"
 description: "Starting your first job can be difficult. You will meet lots of very smart and talented people. Don't let that scare you."
 tags: Self Development
-image: "./featured/book.png"
+image: "/images/feature.png"
 ---
 
 Starting a new job is scary. It awaits you a new company, lots of new people, a whole new culture, and especially: new things to learn.
