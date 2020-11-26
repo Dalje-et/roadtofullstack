@@ -3,6 +3,7 @@ title: Why I created this blog and what to expect from it
 date: "2020-11-22"
 description: "My first ever blog post. Find out why I created this blog and get a sneak peak on what kind of content you can expect in here."
 tags: Introduction
+thumbnail: './portrait.jpg'
 ---
 
 Well, here we are, my first ever blog post! 🎉

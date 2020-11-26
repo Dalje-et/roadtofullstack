@@ -21,7 +21,7 @@ class BlogPostTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
-          image={post.frontmatter.image}
+          image={post.frontmatter.thumbnail}
         />
         <BlogHeader title={post.frontmatter.title} posts={post.frontmatter.tags} />
         <div className="blogContent">
@@ -83,7 +83,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
-        image
+        thumbnail {
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }
