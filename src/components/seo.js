@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const image = image || site.siteMetadata.image;
+  const metaImage = image ||site.siteMetadata.image;
 
   return (
     <Helmet
@@ -40,20 +40,20 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           content: metaDescription
         },
         {
-          name: 'image',
+          name: `image`,
           content: image
-        }
+        },
         {
           property: `og:title`,
           content: title
         },
         {
-          property: `og:description`,
-          content: metaDescription
-        },
-        {
           property: `og:image`,
           content: image
+        },
+        {
+          property: `og:description`,
+          content: metaDescription
         },
         {
           property: `og:type`,
@@ -72,12 +72,12 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           content: title
         },
         {
-          name: `twitter:description`,
-          content: metaDescription
-        },
-        {
           name: `twitter:image`,
           content: image
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription
         }
       ].concat(
         keywords.length > 0 ?
@@ -95,8 +95,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-  description: ``,
-  image: null
+  description: ``
 };
 
 SEO.propTypes = {
@@ -104,8 +103,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
-  image: PropTypes.string
+  title: PropTypes.string.isRequired
 };
 
 export default SEO;
