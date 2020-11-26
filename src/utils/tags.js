@@ -1,6 +1,6 @@
 const tagColors = new Map();
-tagColors.set('News', '#8447FF');
-tagColors.set('Tech', '#ED6A5E');
+tagColors.set('Self Development', '#8447FF');
+tagColors.set('News', '#ED6A5E');
 
 const defaultTagColor = '#348AA7';
 

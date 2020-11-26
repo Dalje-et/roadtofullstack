@@ -14,6 +14,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx;
     const siteTitle = this.props.data.site.siteMetadata.title;
+    
     const { previous, next } = this.props.pageContext;
 
     return (
@@ -21,6 +22,7 @@ class BlogPostTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
+          image={post.frontmatter.image}
         />
         <BlogHeader title={post.frontmatter.title} posts={post.frontmatter.tags} />
         <div className="blogContent">
@@ -63,7 +65,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate;
+export default BlogPostTemplate; 
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -82,6 +84,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+        image
       }
     }
   }
