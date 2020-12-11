@@ -28,7 +28,6 @@ function SEO({ description, lang, meta, keywords, title, thumbnail }) {
 
   const metaDescription = description || site.siteMetadata.description;
   const metaImage = thumbnail && thumbnail.publicURL;
-  console.log(metaImage);
 
   return (
     <Helmet
