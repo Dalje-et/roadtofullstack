@@ -60,6 +60,9 @@ export const pageQuery = graphql`
             title
             description
             tags
+            thumbnail {
+              publicURL
+            }
           }
         }
       }

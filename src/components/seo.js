@@ -27,13 +27,7 @@ function SEO({ description, lang, meta, keywords, title, thumbnail }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const imageSrc = thumbnail && thumbnail.childImageSharp.sizes.src;
-  let origin = '';
-  if (typeof window !== 'undefined') {
-    origin = window.location.origin;
-  }
-
-  const metaImage = origin + imageSrc;
+  const metaImage = thumbnail && thumbnail.publicURL;
   console.log(metaImage);
 
   return (
