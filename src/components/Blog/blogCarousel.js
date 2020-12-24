@@ -19,7 +19,7 @@ export default function BlogCarousel({ title, posts }) {
     ref.current.scrollLeft += 250;
   };
 
-  const cardNodes = posts.map(({ node }, index) => {
+  const cardNodes = posts.map(({ node }) => {
     const title = node.frontmatter.title || node.fields.slug;
     const cardRef = React.createRef();
     return (
@@ -30,6 +30,7 @@ export default function BlogCarousel({ title, posts }) {
         ref={cardRef}
         date={node.frontmatter.date}
         tags={node.frontmatter.tags}
+        thumbnail={node.frontmatter.thumbnail}
         excerpt={node.frontmatter.description || node.excerpt}
       />
     );
