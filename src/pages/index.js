@@ -3,6 +3,7 @@ import React from 'react';
 import WhyAnotherBlog from 'src/components/WhyAnotherBlog/whyAnotherBlog.js';
 import BlogCarousel from 'src/components/Blog/blogCarousel';
 import AboutMe from 'src/components/AboutMe/aboutMe.js';
+import BlogGrid from 'src/components/Blog/blogGrid';
 import Banner from 'src/components/Banner/banner';
 import Layout from 'src/components/layout';
 import SEO from 'src/components/seo';
@@ -25,7 +26,7 @@ class IndexPage extends React.Component {
           <Banner />
           <AboutMe />
           <WhyAnotherBlog />
-          <BlogCarousel
+          <BlogGrid
             title="All posts"
             posts={posts}
           />

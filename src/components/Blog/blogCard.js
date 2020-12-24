@@ -16,10 +16,9 @@ const BlogCard = React.forwardRef(function BlogCard({ link, title, date, tags, e
   return (
     <StyledNavLink to={`/blog${link}`} activeClassName="cardLink">
       <div className="blogCard" key={link} ref={ref}>
-        <img className="thumbnail" src={thumbnail.publicURL} alt={title} />
         <div className="textContainer">
-          <h3>{title}</h3>
           <TagList tags={tags} />
+          <h3>{title}</h3>
           <p className="intro">
             {excerpt}
           </p>
