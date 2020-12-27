@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: 'Road to Fullstack',
@@ -65,7 +67,7 @@ module.exports = {
       options: {
         fonts: [
           'roboto\:300,400,400i,700',
-          'playfair display\:300,400,400i,700'
+          'playfair display\:300,400,400i,500,600,700'
         ],
         display: 'swap'
       }
@@ -110,7 +112,10 @@ module.exports = {
             }
           },
           {
-            resolve: 'gatsby-remark-vscode'
+            resolve: 'gatsby-remark-vscode',
+            options: {
+              theme: 'Light+ (default light)'
+            }
           },
           {
             resolve: 'gatsby-remark-copy-linked-files'

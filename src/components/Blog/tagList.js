@@ -5,6 +5,7 @@ import './tagList.less';
 const tagColors = new Map();
 tagColors.set('Development', '#8447FF');
 tagColors.set('Project', '#ED6A5E');
+tagColors.set('Automation', '#5e6fed');
 
 const defaultTagColor = '#348AA7';
 
@@ -25,7 +26,7 @@ export default function TagList({ tags }) {
   return (
     <div className="tagList">
       {tags && tags.split(',').map((tag) => {
-        return <span key={tag} className="tag" style={getTagStyles(tag)}>{tag}</span>;
+        return <div key={tag} className="tag" style={getTagStyles(tag)}>{tag}</div>;
       })}
     </div>
   );

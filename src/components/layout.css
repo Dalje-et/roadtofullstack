@@ -1,8 +1,20 @@
+@font-face {
+  font-family: "Victor Mono";
+  font-style: normal;
+  src: url(../../content/assets/fonts/VictorMono-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Victor Mono";
+  font-style: italic;
+  src: url(../../content/assets/fonts/VictorMono-BoldItalic.otf) format("opentype");
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, li {
+h1, h2, h3, h4, h5, h6, p, li, cite {
   font-family: "Playfair Display", serif;
   color: #454545;
 }
@@ -61,4 +73,12 @@ a {
   flex: 0 0 auto;
   padding: 5px 10px;
   margin: 15px;
+}
+
+code {
+  font-family: 'Victor Mono'!important;
+  background-color: #00000007;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+  padding: 10px;
 }
