@@ -3,7 +3,7 @@ import React from 'react';
 import './tagList.less';
 
 const tagColors = new Map();
-tagColors.set('Development', '#8447FF');
+tagColors.set('Advice', '#8447FF');
 tagColors.set('Project', '#ED6A5E');
 tagColors.set('Automation', '#5e6fed');
 
