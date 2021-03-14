@@ -1,7 +1,6 @@
 import React from 'react';
 
 import WhyAnotherBlog from 'src/components/WhyAnotherBlog/whyAnotherBlog.js';
-import BlogCarousel from 'src/components/Blog/blogCarousel';
 import AboutMe from 'src/components/AboutMe/aboutMe.js';
 import BlogGrid from 'src/components/Blog/blogGrid';
 import Banner from 'src/components/Banner/banner';
