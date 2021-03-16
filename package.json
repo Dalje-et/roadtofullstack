@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-personal-starter-blog",
+  "name": "road-to-fullstack",
   "private": true,
-  "description": "A personal blog starter for a blog powered by Netlify CMS, based on the default blog starter",
+  "description": "A blog about software and personal development from the point of a view of a young engineer.",
   "version": "2.0.0",
   "author": "Daljeet sandu <daljeet-sandu@hotmail.de>",
   "bugs": {

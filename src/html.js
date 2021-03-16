@@ -14,6 +14,7 @@ export default function HTML(props) {
         <link
           type="application/opensearchdescription+xml"
           rel="search"
+          title="Road to Fullsack"
           href="opensearch.xml"
         />
         {props.headComponents}
