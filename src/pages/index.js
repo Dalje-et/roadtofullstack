@@ -6,6 +6,7 @@ import BlogGrid from 'src/components/Blog/blogGrid';
 import Banner from 'src/components/Banner/banner';
 import Layout from 'src/components/layout';
 import SEO from 'src/components/seo';
+import CV from 'src/components/cv/cv.js';
 
 import 'src/components/layout.css';
 
@@ -24,6 +25,7 @@ class IndexPage extends React.Component {
           />
           <Banner />
           <AboutMe />
+          <CV />
           <WhyAnotherBlog />
           <BlogGrid
             title="All posts"
