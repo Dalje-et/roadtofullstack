@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import TwoColumnSection from 'src/components/TwoColumnSection/twoColumnSection';
+import TwoColumnSection from 'src/components/TwoColumnSection/twoColumnSection';
 
 export default function CV() {
   
